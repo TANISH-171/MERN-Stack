@@ -4,6 +4,7 @@ const app=express();
 
 app.get('/api/notes',(req,res)=>{
     res.status(201).send("Hello from backend and front");
+    console.log("Testing the API");
 });
 
 
