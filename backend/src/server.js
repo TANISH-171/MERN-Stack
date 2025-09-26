@@ -6,7 +6,7 @@ import 'dotenv/config';
 const app=express();
 const PORT=process.env.PORT || 3000;
 connectDB();
-
+app.use(express.json());
 app.use("/api/notes",notesRoutes);
 console.log('MONGO_URI present?', !!process.env.MONGODB_URI);
 
