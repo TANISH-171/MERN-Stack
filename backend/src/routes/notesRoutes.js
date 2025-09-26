@@ -12,3 +12,5 @@ router.put("/",updateNotes);
 router.delete("/",deleteNote);
 
 export default router;
+
+//mongodb+srv://tanish9495_db_user:X6BptCQ7DxoCggdB@cluster0.gzk69hv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

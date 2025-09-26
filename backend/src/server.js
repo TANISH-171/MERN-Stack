@@ -1,8 +1,15 @@
 import express from 'express';
 import notesRoutes from './routes/notesRoutes.js';
-const app=express();
-app.use("/api/notes",notesRoutes);
+import {connectDB} from './config/db.js'
+import 'dotenv/config';
 
-app.listen(3000,()=>{
-    console.log("Server is running on port 3000");
+const app=express();
+const PORT=process.env.PORT || 3000;
+connectDB();
+
+app.use("/api/notes",notesRoutes);
+console.log('MONGO_URI present?', !!process.env.MONGODB_URI);
+
+app.listen(PORT,()=>{
+    console.log(`Server is running on port ${PORT}`);
 });
